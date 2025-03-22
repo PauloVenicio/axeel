@@ -1,48 +1,217 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Axeel Estilo Co. | Moda Masculina</title>
-		<link rel="shortcut icon" href="./src/imagens/favicon.png" type="image/x-icon" />
-		<link href="https://fonts.cdnfonts.com/css/chalet" rel="stylesheet" />
-		<link rel="stylesheet" href="./src/css/estilo.css" />
-		<link rel="stylesheet" href="./src/css/fontes.css" />
-		<link rel="stylesheet" href="./src/css/reset.css" />
-		<link rel="stylesheet" href="./src/css/responsivo.css">
-	</head>
-	<body>
-		<header class="cabecalho">
-			<div class="logo">
-				<img src="./src/imagens/logo axeel.png" alt="Logo Axeel" />
-				<hr />
-				<img src="./src/imagens/logo.png" alt="Axeel" />
-			</div>
-			<nav>
-				<ul class="menu">
-					<li>
-						<a href="#home">useaxeel</a>
-					</li>
-					<li>
-						<a href="https://api.whatsapp.com/send?phone=5599988266838&text=Oi!%20Quero%20ver%20o%20catal%C3%B3go%20da%20%40useaxeel%20%F0%9F%A4%AD" target="_blank">Whatsapp <img src="./src/imagens/icone-link.svg" alt="Icone de link de whatsapp" /></a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com/useaxeel/" target="_blank">Instagram <img src="./src/imagens/icone-link.svg" alt="Icone de link de instagram" /></a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main class="home" id="home">
-			<img class="imagem-fundo" src="./src/imagens/bg-main.png" alt="Rapaz de com roupas da" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo Carvalho | Youtuber / TecInfo / Gamer</title>
+    <!-- Importando a fonte Poppins do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Garantir que o box-sizing seja aplicado a todos os elementos */
+        * {
+            box-sizing: border-box;
+        }
 
-			<div class="informacoes">
-				<h1 class="titulo">Roupas e Acessórios Masculinos</h1>
-				<p class="texto">O Estilo que você procura: Casual, Elegante ou Despojado está AQUI!</p>
+        /* Estilo geral */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1b99fa; /* Verde fluorescente */
+            color: black;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden; /* Desabilitar a rolagem horizontal */
+            width: 100%; /* Garantir que o conteúdo ocupe 100% da largura */
+        }
 
-				<a class="btn-comprar" href="#comprar">Compre já</a>
-			</div>
-		</main>
-		</section>
-		<script src="./src/js/index.js"></script>
-	</body>
+        /* Barra de relógio */
+        .clock-bar {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Cabeçalho */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header h1 .icon {
+            margin-right: 10px;
+        }
+
+        .header h1 .youtube-icon {
+            margin-left: 10px; /* Espaço depois do ícone do YouTube */
+        }
+
+        .header .flags {
+            margin-left: 10px;
+        }
+
+        /* Navegação */
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: gray;
+            border-radius: 5px;
+        }
+
+        /* Conteúdo principal */
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        .social-media-image img {
+            width: 1800px;
+            max-width: 100%;
+            height: 470px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons li {
+            display: inline;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: rgb(16, 241, 245);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .social-media-image img {
+                max-width: 100%;
+            }
+
+            .footer {
+                padding: 10px;
+            }
+
+            .social-icons {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>
+            <i class="fas fa-gamepad icon"></i> <!-- Ícone de controle de videogame -->
+            Paulo Carvalho | Youtuber / TecInfo / Gamer
+            <i class="fab fa-youtube youtube-icon"></i> <!-- Ícone de YouTube com margem esquerda -->
+        </h1>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+
+        <div class="social-media-image">
+            <img src="https://www.sp.senac.br/documents/portlet_file_entry/51828463/profissional-de-ti-ia-internet-of-things.jpeg/1aaf6246-4367-9799-28a2-12330d8c5709?imagePreview=1">
+        </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/paulocarvalhocx/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://x.com/PauloCa19694791" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/paulovenicio/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@PauloCarvalhoPC" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+        &copy; 2025 Paulo Carvalho - Todos os direitos reservados.
+        <div class="clock-bar" id="clock"></div>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const days = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+            const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+            
+            const dayOfWeek = days[now.getDay()];
+            const day = now.getDate();
+            const month = months[now.getMonth()];
+            const year = now.getFullYear();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            
+            const dateTimeString = `${dayOfWeek}, ${day} de ${month} de ${year} - ${hours}:${minutes}:${seconds}`;
+            document.getElementById("clock").innerText = dateTimeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
 </html>
