@@ -86,6 +86,13 @@ body{
     line-height: 1.6;
 }
 
+.home .informacoes .texto{
+    font-family: "Chalet";
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 32ch;
+}
+
 .btn-comprar,
 .btn-plataforma{
     background-color: rgba(255, 255, 255, 0.1);
@@ -221,6 +228,66 @@ body{
 
 .compre-ja .btn-plataforma .plataformas li:nth-child(5):hover {
     background-color: #fcaf17;
+}
+
+.radar-2026 {
+    background: linear-gradient(180deg, #161616, #0f0f0f);
+    padding: 80px;
+}
+
+.radar-2026 .radar-cabecalho {
+    max-width: 760px;
+    margin-bottom: 40px;
+}
+
+.radar-2026 .tag {
+    display: inline-block;
+    font-family: "ChaletComprime";
+    letter-spacing: 1px;
+    color: #7cf5ff;
+    margin-bottom: 10px;
+}
+
+.radar-2026 h2 {
+    font-family: "ChaletComprime";
+    font-size: 52px;
+    margin-bottom: 14px;
+}
+
+.radar-2026 p {
+    color: #d4d4d4;
+    line-height: 1.6;
+}
+
+.radar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.radar-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(124, 245, 255, 0.25);
+    border-radius: 14px;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+}
+
+.radar-card h3 {
+    font-family: "ChaletComprime";
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.radar-card.destaque {
+    background: radial-gradient(circle at top, rgba(124, 245, 255, 0.2), rgba(9, 9, 9, 0.9));
+}
+
+.radar-card .contador {
+    color: #7cf5ff;
+    font-family: "ChaletComprime";
+    font-size: 42px;
+    margin: 6px 0;
 }
 
 
