@@ -25,6 +25,18 @@
   .compre-ja .cartao {
     width: 70%;
   }
+
+  .radar-2026 {
+    padding: 50px 30px;
+  }
+
+  .radar-2026 h2 {
+    font-size: 42px;
+  }
+
+  .radar-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -52,6 +64,10 @@
 
   .btn-comprar {
     width: 100%;
+  }
+
+  .radar-card .contador {
+    font-size: 34px;
   }
 }
 
